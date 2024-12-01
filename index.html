@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Sunnyside agency landing page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              SoftRed: "hsl(7, 99%, 70%)",
+              yellow: "hsl(51, 100%, 49%)",
+              DarkCyan: "hsl(167, 40%, 24%)",
+              DarkBlue: "hsl(198, 62%, 26%)",
+              DarkModerateCyan: "hsl(168, 34%, 41%)",
+              VeryDarkBlue: "hsl(212, 27%, 19%)",
+              VeryDarkGrayishBlue: "hsl(213, 9%, 39%)",
+              DarkGrayishBlue: "hsl(232, 10%, 55%)",
+              GrayishBlue: "hsl(210, 4%, 67%)",
+              White: "hsl(0,0%, 100%)",
+            },
+            fontFamily: {
+              Barlow: ["Barlow", "sans-serif"],
+              Fraunces: ["Fraunces", "serif"],
+            },
+            backgroundImage: {
+              "image-header": "url('./images/desktop/image-header.jpg')",
+              "image-header-mobile": "url('./images/mobile/image-header.jpg')",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Fraunces", sans-serif;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="w-full font-Barlow font-semibold text-[18px]">
+    <header
+      class="relative bg-cover bg-center h-screen lg:bg-image-header bg-image-header-mobile"
+    >
+      <div class="relative px-9 py-12 flex justify-between items-center">
+        <img class="w-[11rem]" src="./images/logo.svg" alt="logo" />
+
+        <!-- Hamburger Icon -->
+        <!-- <button
+          id="hamburger"
+          class="block lg:hidden focus:outline-none"
+          aria-label="Menu Toggle"
+        >
+          <img
+            src="./images/icon-hamburger.svg"
+            alt="Hamburger Menu"
+            class="w-6"
+          />
+        </button> -->
+
+        <nav class="flex ">
+          <button
+          id="hamburger"
+          class="block lg:hidden focus:outline-none"
+          aria-label="Menu Toggle"
+        >
+          <img
+            src="./images/icon-hamburger.svg"
+            alt="Hamburger Menu"
+            class="w-6"
+          />
+        </button>
+          <ul class="text-center lg:flex lg:gap-12 lg:text-white font-bold ">
+            <li><a href="#about" class="hover:text-gray-200">About</a></li>
+            <li>
+              <a href="#services" class="hover:text-gray-200">Services</a>
+            </li>
+            <li>
+              <a href="#projects" class="hover:text-gray-200">Projects</a>
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="text-black py-4 px-6 rounded-full font-Fraunces uppercase bg-white hover:text-white hover:bg-[#6fcfff]"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div
+        class="text-white text-center mt-16 flex justify-center items-center flex-col gap-24"
+      >
+        <h1
+          class="text-4xl text-6xl font-bold font-Fraunces tracking-widest"
+        >
+          WE ARE CREATIVES
+        </h1>
+        <img
+          src="./images/icon-arrow-down.svg"
+          alt="Arrow Down"
+          class="lg:mt-4 w-8 animate-bounce"
+        />
+      </div>
+    </header>
+    <main class="w-full">
+      <section class="flex justify-center items-center flex-col-reverse lg:flex-row">
+        <div class="w-full lg:w-[50%] px-16 lg:px-32 text-center lg:text-left my-12 lg:my-0">
+          <h3 class="font-bold text-4xl lg:text-5xl tracking-tighter leading-tight mb-8">
+            Transform your brand
+          </h3>
+          <p class="text-GrayishBlue mb-8">
+            We are a full-service creative agency specializing in helping brands
+            grow fast. Engage your clients through compelling visuals that do
+            most of the marketing for you.
+          </p>
+
+          <a href="#" class="relative text-black uppercase font-Fraunces group">
+            <span class="relative z-10">Learn More</span>
+            <span
+              class="absolute inset-x-0 bottom-0 h-3 bg-yellow rounded-full opacity-30 transition-all duration-300 group-hover:opacity-100 group-hover:scale-y-125"
+            ></span>
+          </a>
+        </div>
+        <div class="w-full lg:w-[50%]">
+          <img
+            class="w-full"
+            src="./images/desktop/image-transform.jpg"
+            alt="Services"
+          />
+        </div>
+      </section>
+      <section class="flex justify-center items-center flex-col lg:flex-row ">
+        <div class="w-full lg:w-[50%] ">
+          <img
+            src="./images/desktop/image-stand-out.jpg"
+            alt="image-stand-out"
+            class="w-full"
+          />
+        </div>
+        <div class="w-full lg:w-[50%] px-20 lg:px-28 text-center lg:text-left my-12 lg:my-0">
+          <h3 class="font-bold text-4xl lg:text-5xl tracking-tighter leading-tight mb-8">
+            Stand out to the right audience
+          </h3>
+          <p class="text-GrayishBlue mb-8">
+            Using a collaborative formula of designers, researchers,
+            photographers, videographers, and copywriters, we’ll build and
+            extend your brand in digital places.
+          </p>
+
+          <a href="#" class="relative text-black uppercase font-Fraunces group">
+            <span class="relative z-10">Learn More</span>
+            <span
+              class="absolute inset-x-0 bottom-0 h-3 bg-SoftRed rounded-full opacity-30 transition-all duration-300 group-hover:opacity-100 group-hover:scale-y-125"
+            ></span>
+          </a>
+        </div>
+      </section>
+      <section class="flex justify-center items-center flex-col lg:flex-row">
+        <div class="w-full lg:w-[50%] relative text-DarkCyan">
+          <img src="./images/mobile/image-graphic-design.jpg " alt="mobile-graphic-design" class="w-full md:hidden block">
+          <img
+            src="./images/desktop/image-graphic-design.jpg"
+            alt="image-graphic-design"
+            class="w-full md:block hidden"
+          />
+          <div class="absolute bottom-28 text-center">
+            <h3 class="text-3xl mb-8">Graphic Design</h3>
+            <p class="mx-[3rem] lg:mx-[10rem]">
+              Great design makes you memorable. We deliver artwork that
+              underscores your brand message and captures potential clients’
+              attention.
+            </p>
+          </div>
+        </div>
+        <div class="w-full lg:w-[50%] relative text-DarkBlue">
+          <img src="./images/mobile/image-photography.jpg" alt="mobile-photography" 
+          class="w-full block md:hidden">
+          <img
+            src="./images/desktop/image-photography.jpg"
+            alt="image-photography"
+            class="w-full md:block hidden"
+          />
+          <div class="absolute bottom-28 text-center">
+            <h3 class="text-3xl mb-8">photography</h3>
+            <p class="mx-[3rem] lg:mx-[12rem]">
+              Increase your credibility by getting the most stunning,
+              high-quality photos that improve your business image.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="bg-white lg:px-28 lg:py-36">
+        <h3
+          class="text-center uppercase text-xl text-GrayishBlue tracking-[0.4rem] mt-[3rem]"
+        >
+          Client testimonials
+        </h3>
+        <div class="flex justify-evenly items-center gap-10 text-center pt-28 flex-col lg:flex-row ">
+          <div class="flex justify-center items-center flex-col gap-5 lg:gap-14 px-20">
+            <img
+              src="./images/image-emily.jpg"
+              alt="image-emily"
+              class="w-16 rounded-full"
+            />
+            <p class="text-DarkGrayishBlue">
+              We put our trust in Sunnyside and they delivered, making sure our
+              needs were met and deadlines were always hit.
+            </p>
+            <span>
+              <h4>Emily R.</h4>
+              <small class="text-GrayishBlue">Marketing Director</small>
+            </span>
+          </div>
+          <div class="flex justify-center items-center flex-col gap-5 lg:gap-14 px-20 mt-12 lg:mt-0">
+            <img
+              src="./images/image-thomas.jpg"
+              alt="image-thomas"
+              class="w-16 rounded-full"
+            />
+            <p class="text-DarkGrayishBlue">
+              Sunnyside’s enthusiasm coupled with their keen interest in our
+              brand’s success made it a satisfying and enjoyable experience.
+            </p>
+            <span>
+              <h4 class="text-VeryDarkBlue">Thomas S.</h4>
+              <small class="text-GrayishBlue">Chief Operating Officer</small>
+            </span>
+          </div>
+          <div class="flex justify-center items-center flex-col gap-5 lg:gap-14 px-20 my-12 lg:my-0">
+            <img
+              src="./images/image-jennie.jpg"
+              alt="image-jennie"
+              class="w-16 rounded-full"
+            />
+            <p class="text-DarkGrayishBlue">
+              Incredible end result! Our sales increased over 400% when we
+              worked with Sunnyside. Highly recommended!
+            </p>
+            <span>
+              <h4>Jennie F.</h4>
+              <small class="text-GrayishBlue">Business Owner</small>
+            </span>
+          </div>
+        </div>
+      </section>
+      <section class="flex justify-center items-center flex-wrap">
+        <img src="./images/mobile/image-gallery-milkbottles.jpg" alt="mobile-milkbottle" class="block md:hidden w-1/2">
+        <img
+          class="w-[25%] hidden md:block"
+          src="./images/desktop/image-gallery-milkbottles.jpg"
+          alt="image-gallery-milkbottles"
+        />
+        <img src="./images/mobile/image-gallery-orange.jpg" alt="mobile-orange" class="block md:hidden w-1/2">
+        <img 
+          class="w-[25%] hidden md:block"
+          src="./images/desktop/image-gallery-orange.jpg"
+          alt="image-gallery-orange"
+        />
+        <img src="./images/mobile/image-gallery-cone.jpg" alt="mobile-cone" class="block md:hidden w-1/2">
+        <img
+          class="w-[25%] hidden md:block"
+          src="./images/desktop/image-gallery-cone.jpg"
+          alt="image-gallery-cone"
+        />
+        <img src="./images/mobile/image-gallery-sugar-cubes.jpg" alt="mobile-sugercubes" class="block md:hidden w-1/2">
+        <img
+          class="w-[25%] hidden md:block"
+          src="./images/desktop/image-gallery-sugarcubes.jpg"
+          alt="image-gallery-sugarcubes"
+        />
+      </section>
+      
+    </main>
+    <footer
+        class="bg-[#90d4c5] text-DarkCyan flex items-center justify-center flex-col gap-8 p-20"
+      >
+        <img src="./images/logo_copy.svg" alt="logo" />
+        <div>
+          <ul class="flex gap-20">
+            <li><a class="hover:text-white" href="#">About</a></li>
+            <li><a class="hover:text-white" href="#">Services</a></li>
+            <li><a class="hover:text-white" href="#">Projects</a></li>
+          </ul>
+        </div>
+        <div class="flex gap-10 mt-16">
+          <img
+            class="hover:bg-white"
+            src="./images/icon-facebook.svg"
+            alt="icon-facebook"
+          /><img src="./images/icon-instagram.svg" alt="icon-instagram" /><img
+            class="hover:bg-white"
+            src="./images/icon-twitter.svg"
+            alt="icon-twitter"
+          /><img
+            src="./images/icon-pinterest.svg"
+            alt="icon-pinterest"
+            class="hover:bg-white"
+          />
+        </div>
+      </footer>
+  </body>
+</html>
